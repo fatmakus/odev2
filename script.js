@@ -16,7 +16,7 @@ function calculate(operator) {
         result = input1 * input2;
         break;
       case '/':
-        result = input2 !== 0 ? input1 / input2 : 'undefined';
+        result = input2 !== 0 ? input1 / input2 : 'Undefined';
         break;
     }
 
