@@ -5,13 +5,33 @@
     <body>
        <input id="sayi1" type="number"/>
        <input id="sayi2" type="number"/>
-       <button onclick="topla()">Topla</button>
+       <button onclick="hesapla('+')">Topla</button>
+       <button onclick="hesapla('-')">Çıkar</button>
+       <button onclick="hesapla('*')">Çarp</button>
+       <button onclick="hesapla('/')">Böl</button>
        <div id ="sonuc"></div>
         <script>
-           function topla() {
-            var sayi1 = document.getElementById("sayi1").value;
-            var sayi2 = document.getElementById("sayi2").value;
-            var sonuc = Number(sayi1) + Number(sayi2);
+            var sayi1 = document.getElementById("sayi1");
+            var sayi2 = document.getElementById("sayi2");
+
+            function hesapla(type) {
+                 
+            var sonuc = "";
+            switch(type) {
+                case "+":
+                    sonuc = Number(sayi1.value) + Number(sayi2.value);
+                    break
+                case "-":
+                    sonuc = Number(sayi1.value) - Number(sayi2.value);
+                    break
+                case "*":
+                    sonuc = Number(sayi1.value) * Number(sayi2.value);
+                    break
+                case "/":
+                    sonuc = Number(sayi1.value) / Number(sayi2.value);
+                    break
+            
+            }
            document.getElementById('sonuc').innerHTML = sonuc;
            }
 
