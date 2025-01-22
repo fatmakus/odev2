@@ -1,40 +1,27 @@
-<html>
-    <head>
-        <title> Deneme </title>
-    </head>
-    <body>
-       <input id="sayi1" type="number"/>
-       <input id="sayi2" type="number"/>
-       <button onclick="hesapla('+')">Topla</button>
-       <button onclick="hesapla('-')">Çıkar</button>
-       <button onclick="hesapla('*')">Çarp</button>
-       <button onclick="hesapla('/')">Böl</button>
-       <div id ="sonuc"></div>
-        <script>
-            var sayi1 = document.getElementById("sayi1");
-            var sayi2 = document.getElementById("sayi2");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <div class="calculator">
+    <input type="number" id="input1" class="calc-input"  />
+    <input type="number" id="input2" class="calc-input"  />
+    
+    <div class="buttons">
+      <button class="calc-btn" onclick="calculate('+')">+</button>
+      <button class="calc-btn" onclick="calculate('-')">-</button>
+      <button class="calc-btn" onclick="calculate('*')">*</button>
+      <button class="calc-btn" onclick="calculate('/')">/</button>
+    </div>
 
-            function hesapla(type) {
-                 
-            var sonuc = "";
-            switch(type) {
-                case "+":
-                    sonuc = Number(sayi1.value) + Number(sayi2.value);
-                    break
-                case "-":
-                    sonuc = Number(sayi1.value) - Number(sayi2.value);
-                    break
-                case "*":
-                    sonuc = Number(sayi1.value) * Number(sayi2.value);
-                    break
-                case "/":
-                    sonuc = Number(sayi1.value) / Number(sayi2.value);
-                    break
-            
-            }
-           document.getElementById('sonuc').innerHTML = sonuc;
-           }
+    <input type="text" id="result" class="calc-input" readonly />
+  </div>
 
-        </script>
-    </body>
+<script src="script.js"></script>
+</body>
 </html>
